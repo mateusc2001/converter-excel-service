@@ -61,7 +61,9 @@ public class SantanderService {
                         //registroExcelModel.setValor(Math.abs(valor));
                     }
                 });
-                registroExcelModelList.add(registroExcelModel);
+                if (!registroExcelModel.equals(new RegistroExcelModel())) {
+                    registroExcelModelList.add(registroExcelModel);
+                }
             }
         });
         return registroExcelModelList;
